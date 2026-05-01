@@ -1,7 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
+ 
 import appCss from "../styles.css?url";
-
+ 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -23,20 +23,21 @@ function NotFoundComponent() {
     </div>
   );
 }
-
+ 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Kaitlyn — Digital Media Designer" },
+      { name: "description", content: "Portfolio of Kaitlyn — digital media creator crafting immersive 3D, motion, and web experiences." },
+      { name: "author", content: "Kaitlyn" },
+      { property: "og:title", content: "Kaitlyn — Digital Media Designer" },
+      { property: "og:description", content: "Portfolio of Kaitlyn — 3D modeling, rendering, motion design, videography, and web design." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Kaitlyn — Digital Media Designer" },
+      { name: "twitter:description", content: "Digital media creator crafting immersive 3D, motion, and web experiences." },
     ],
     links: [
       {
@@ -49,7 +50,7 @@ export const Route = createRootRoute({
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
+ 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -63,7 +64,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
-
+ 
 function RootComponent() {
   return <Outlet />;
 }
