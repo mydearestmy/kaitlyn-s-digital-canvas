@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Mail, Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
- 
+
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
@@ -13,40 +13,40 @@ export const Route = createFileRoute("/contact")({
     ],
   }),
 });
- 
+
 const contactLinks = [
-  { icon: Mail, label: "Email", value: "hello@kaitlyn.studio", href: "mailto:hello@kaitlyn.studio" },
-  { icon: Instagram, label: "Instagram", value: "@kaitlyn.designs", href: "https://instagram.com/kaitlyn.designs" },
-  { icon: Linkedin, label: "LinkedIn", value: "in/kaitlyn", href: "https://linkedin.com/in/kaitlyn" },
+  { icon: Mail, label: "Email", value: "kaitlynmeiruan@gmail.com", href: "mailto:hello@kaitlyn.studio" },
+  { icon: Instagram, label: "Instagram", value: "@dearestmyy", href: "https://instagram.com/dearestmyy" },
+  { icon: Linkedin, label: "LinkedIn", value: "Kaitlyn Nguyen", href: "www.linkedin.com/in/kaitlyn-nguyen-74558a3b6" },
 ];
- 
+
 function ContactPage() {
   return (
     <main style={{ backgroundColor: "#0C0C0C", minHeight: "100vh" }} className="text-[#D7E2EA]">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 py-10 md:py-14">
- 
+
         {/* Back */}
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-[#D7E2EA]/50 hover:text-[#D7E2EA] uppercase tracking-widest text-sm transition-colors"
+          className="relative z-20 inline-flex items-center gap-2 text-[#D7E2EA]/50 hover:text-[#D7E2EA] uppercase tracking-widest text-sm transition-colors"
         >
           <ArrowLeft size={16} /> Back
         </Link>
- 
+
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="hero-heading font-black uppercase tracking-tight leading-none mt-10 mb-16 md:mb-20"
+          className="relative z-10 hero-heading font-black uppercase tracking-tight leading-none mt-10 mb-16 md:mb-20 text-center"
           style={{ fontSize: "clamp(3.5rem, 13vw, 160px)" }}
         >
           Let's Talk
         </motion.h1>
- 
+
         {/* Two-column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
- 
+
           {/* Left — contact info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ function ContactPage() {
               Got a project in mind, a collaboration idea, or just want to say hi?
               I'd love to hear from you.
             </p>
- 
+
             <div className="flex flex-col gap-4">
               {contactLinks.map(({ icon: Icon, label, value, href }, i) => (
                 <motion.a
@@ -71,7 +71,7 @@ function ContactPage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.35 + i * 0.1 }}
-                  className="group flex items-center gap-5 rounded-2xl border border-[#D7E2EA]/20 hover:border-[#D7E2EA]/60 px-6 py-5 transition-all duration-300 hover:bg-[#D7E2EA]/5"
+                  className="group flex items-center gap-5 rounded-2xl border border-[#D7E2EA]/20 hover:border-[#D7E2EA]/60 px-10 py-8 transition-all duration-300 hover:bg-[#D7E2EA]/5"
                 >
                   <div className="text-[#D7E2EA]/50 group-hover:text-[#D7E2EA] transition-colors">
                     <Icon size={22} />
@@ -84,7 +84,7 @@ function ContactPage() {
               ))}
             </div>
           </motion.div>
- 
+
           {/* Right — form */}
           <motion.form
             onSubmit={(e) => e.preventDefault()}
@@ -105,7 +105,7 @@ function ContactPage() {
                 />
               </div>
             ))}
- 
+
             <div className="relative">
               <textarea
                 placeholder="Your message"
@@ -113,7 +113,7 @@ function ContactPage() {
                 className="w-full bg-transparent border-b border-[#D7E2EA]/25 focus:border-[#D7E2EA] outline-none py-4 text-base md:text-lg placeholder:text-[#D7E2EA]/35 transition-colors resize-none"
               />
             </div>
- 
+
             <div className="pt-2">
               <button
                 type="submit"
@@ -133,4 +133,6 @@ function ContactPage() {
       </div>
     </main>
   );
+}
+
 }
