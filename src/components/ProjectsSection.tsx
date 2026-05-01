@@ -24,19 +24,15 @@ export function ProjectsSection() {
       </h2>
 
       <div className="max-w-7xl mx-auto">
-        {projects.map((project, i) => {
-          const targetScale = 1 - (projects.length - 1 - i) * 0.03;
-          const range = [i / projects.length, 1];
-          const scale = useTransform(scrollYProgress, range, [1, targetScale]);
-          return (
-            <ProjectCard
-              key={project.number}
-              project={project}
-              index={i}
-              scale={scale}
-            />
-          );
-        })}
+        {projects.map((project, i) => (
+          <ProjectCard
+            key={project.number}
+            project={project}
+            index={i}
+            total={projects.length}
+            progress={scrollYProgress}
+          />
+        ))}
       </div>
     </section>
   );
@@ -45,12 +41,16 @@ export function ProjectsSection() {
 function ProjectCard({
   project,
   index,
-  scale,
+  total,
+  progress,
 }: {
   project: Project;
   index: number;
-  scale: MotionValue<number>;
+  total: number;
+  progress: MotionValue<number>;
 }) {
+  const targetScale = 1 - (total - 1 - index) * 0.03;
+  const scale = useTransform(progress, [index / total, 1], [1, targetScale]);
   return (
     <div
       className="h-[85vh] flex items-start justify-center"
