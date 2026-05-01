@@ -7,7 +7,7 @@ const navLinks = ["About", "Price", "Projects", "Contact"];
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen flex flex-col" style={{ overflowX: "clip" }}>
+    <section className="relative h-screen min-h-[700px] flex flex-col" style={{ overflowX: "clip" }}>
       <FadeIn delay={0} y={-20}>
         <nav className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8">
           {navLinks.map((link) => (
@@ -25,7 +25,7 @@ export function HeroSection() {
       <div className="flex-1 flex flex-col justify-between relative">
         <div className="overflow-hidden mt-6 sm:mt-4 md:-mt-5 px-6 md:px-10">
           <FadeIn delay={0.15} y={40}>
-            <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[10vw] sm:text-[11vw] md:text-[12vw] lg:text-[13vw]">
+            <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[8.5vw] sm:text-[9.5vw] md:text-[10.5vw] lg:text-[11.5vw]">
               Hi, i&apos;m Kaitlyn
             </h1>
           </FadeIn>
@@ -36,7 +36,7 @@ export function HeroSection() {
           strength={3}
           activeTransition="transform 0.3s ease-out"
           inactiveTransition="transform 0.6s ease-in-out"
-          className="absolute left-1/2 -translate-x-1/2 z-10 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0"
+          className="absolute left-1/2 -translate-x-1/2 z-10 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-[80px] md:bottom-[100px]"
         >
           <FadeIn delay={0.6} y={30}>
             <img src={modelImg} alt="Kaitlyn portrait" className="w-full h-auto" />
