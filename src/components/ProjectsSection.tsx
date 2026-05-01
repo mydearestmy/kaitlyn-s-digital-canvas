@@ -57,10 +57,10 @@ function ProjectCard({
       style={{ top: `${index * 28}px`, position: "relative" }}
     >
       <motion.div
-        className="sticky top-24 md:top-32 w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8"
+        className="sticky top-24 md:top-32 w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-8 sm:p-10 md:p-14 flex flex-col items-center"
         style={{ scale, transformOrigin: "top" }}
       >
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 md:mb-8">
+        <div className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8 md:mb-10">
           <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
             <span
               className="text-[#D7E2EA] font-black leading-none"
@@ -80,31 +80,15 @@ function ProjectCard({
               </h3>
             </div>
           </div>
-          <LiveProjectButton />
+          <LiveProjectButton projectNumber={project.number} />
         </div>
 
-        <div className="grid grid-cols-5 gap-3 sm:gap-4 md:gap-5">
-          <div className="col-span-2 flex flex-col gap-3 sm:gap-4 md:gap-5">
-            <img
-              src={project.col1Image1}
-              alt={`${project.name} 1`}
-              className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: "clamp(130px, 16vw, 230px)" }}
-            />
-            <img
-              src={project.col1Image2}
-              alt={`${project.name} 2`}
-              className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: "clamp(160px, 22vw, 340px)" }}
-            />
-          </div>
-          <div className="col-span-3">
-            <img
-              src={project.col2Image}
-              alt={`${project.name} 3`}
-              className="w-full h-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-            />
-          </div>
+        <div className="w-full flex justify-center">
+          <img
+            src={project.col2Image}
+            alt={project.name}
+            className="w-full max-h-[55vh] object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
+          />
         </div>
       </motion.div>
     </div>
