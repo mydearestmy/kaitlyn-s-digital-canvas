@@ -17,8 +17,7 @@ export const Route = createFileRoute("/contact")({
 const contactLinks = [
   { icon: Mail, label: "Email", value: "kaitlynmeiruan@gmail.com", href: "mailto:hello@kaitlyn.studio" },
   { icon: Instagram, label: "Instagram", value: "@dearestmyy", href: "https://instagram.com/dearestmyy" },
-  { icon: Linkedin, label: "LinkedIn", value: "Kaitlyn Nguyen", href: "www.linkedin.com/in/
-kaitlyn-nguyen-74558a3b6" },
+  { icon: Linkedin, label: "LinkedIn", value: "Kaitlyn Nguyen", href: "https://www.linkedin.com/in/kaitlyn-nguyen-74558a3b6" },
 ];
 
 function ContactPage() {
