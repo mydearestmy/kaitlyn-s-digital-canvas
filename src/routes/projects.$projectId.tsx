@@ -129,7 +129,7 @@ function ProjectDetailPage() {
           </motion.div>
         </div>
 
-        {/* Gallery — video if available, otherwise two image placeholders */}
+        {/* Gallery section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -137,6 +137,7 @@ function ProjectDetailPage() {
           className="mt-16"
         >
           {project.videoUrl ? (
+            // YouTube / Vimeo embed
             <div className="rounded-[24px] overflow-hidden border border-[#D7E2EA]/20 aspect-video bg-[#1a1a1a]">
               <iframe
                 src={project.videoUrl}
@@ -146,7 +147,34 @@ function ProjectDetailPage() {
                 className="w-full h-full border-0"
               />
             </div>
+          ) : project.gallery && project.gallery.length > 0 ? (
+            // Masonry grid — 3 columns, images keep their natural height
+            <div
+              style={{
+                columns: "3",
+                columnGap: "1rem",
+              }}
+              className="sm:columns-2 md:columns-3"
+            >
+              {project.gallery.map((src, i) => (
+                <motion.div
+                  key={src}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.05 * i }}
+                  className="mb-4 break-inside-avoid rounded-2xl overflow-hidden border border-[#D7E2EA]/10"
+                >
+                  <img
+                    src={src}
+                    alt={`${project.name} ${i + 1}`}
+                    className="w-full h-auto block"
+                    loading="lazy"
+                  />
+                </motion.div>
+              ))}
+            </div>
           ) : (
+            // Fallback placeholders
             <div className="grid gap-6 sm:grid-cols-2">
               {[0, 1].map((i) => (
                 <div
