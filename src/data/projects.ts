@@ -6,6 +6,9 @@ export interface Project {
   col1Image1: string;
   col1Image2: string;
   col2Image: string;
+  description?: string;
+  year?: string;
+  role?: string;
 }
 
 export const projects: Project[] = [
@@ -13,26 +16,40 @@ export const projects: Project[] = [
     number: "01",
     category: "University Project",
     name: "Memory Box",
+    description:
+      "A surreal exploration of memory and nostalgia — blending fragmented visuals and emotional storytelling to create an immersive digital experience. The project investigates how we archive personal history and the way memories distort over time.",
+    year: "2026",
+    role: "Designer & Art Director",
     col1Image1:
       "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85",
     col1Image2:
       "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85",
-    col2Image: "https://raw.githubusercontent.com/mydearestmy/kaitlyn-s-digital-canvas/main/src/assets/memory-box.png",
+    col2Image:
+      "https://raw.githubusercontent.com/mydearestmy/kaitlyn-s-digital-canvas/main/src/assets/memory-box.png",
   },
   {
     number: "02",
     category: "Personal",
     name: "photograph",
+    description:
+      "A personal photography series capturing candid moments, quiet emotions, and the beauty found in everyday life. Each frame is an attempt to slow down and find meaning in the fleeting — light, shadow, and the spaces in between.",
+    year: "2025",
+    role: "Photographer",
     col1Image1:
       "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85",
     col1Image2:
       "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85",
-    col2Image: "https://raw.githubusercontent.com/mydearestmy/kaitlyn-s-digital-canvas/main/src/assets/photograph.jpg",
+    col2Image:
+      "https://raw.githubusercontent.com/mydearestmy/kaitlyn-s-digital-canvas/main/src/assets/photograph.jpg",
   },
   {
     number: "03",
-    category: "PERSONAL",
-    name: "A GLIMPSE OF SYDNEY",
+    category: "Personal",
+    name: "A Glimpse of Sydney",
+    description:
+      "A visual diary of Sydney through a personal lens — its harbour light, hidden laneways, and the quiet hum of urban life. This project documents the city not as a postcard, but as a living, breathing place full of texture and feeling.",
+    year: "2025",
+    role: "Photographer & Editor",
     col1Image1:
       "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85",
     col1Image2:
