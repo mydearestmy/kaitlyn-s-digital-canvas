@@ -102,7 +102,7 @@ function ProjectDetailPage() {
               className="font-light leading-relaxed text-[#D7E2EA]/80"
               style={{ fontSize: "clamp(1rem, 1.4vw, 1.2rem)" }}
             >
-              {project.description ?? `[Placeholder description] This is where the story of ${project.name} lives — the brief, the inspiration, the process, and the outcome. Replace this placeholder with the full project narrative.`}
+              {project.description ?? `This is where the story of ${project.name} lives — the brief, the inspiration, the process, and the outcome.`}
             </p>
           </motion.div>
 
@@ -129,21 +129,35 @@ function ProjectDetailPage() {
           </motion.div>
         </div>
 
-        {/* Gallery placeholders */}
+        {/* Gallery — video if available, otherwise two image placeholders */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 grid gap-6 sm:grid-cols-2"
+          className="mt-16"
         >
-          {[0, 1].map((i) => (
-            <div
-              key={i}
-              className="rounded-[24px] border border-dashed border-[#D7E2EA]/20 aspect-video flex items-center justify-center text-[#D7E2EA]/30 uppercase tracking-widest text-xs"
-            >
-              Image Placeholder
+          {project.videoUrl ? (
+            <div className="rounded-[24px] overflow-hidden border border-[#D7E2EA]/20 aspect-video bg-[#1a1a1a]">
+              <iframe
+                src={project.videoUrl}
+                title={project.name}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full border-0"
+              />
             </div>
-          ))}
+          ) : (
+            <div className="grid gap-6 sm:grid-cols-2">
+              {[0, 1].map((i) => (
+                <div
+                  key={i}
+                  className="rounded-[24px] border border-dashed border-[#D7E2EA]/20 aspect-video flex items-center justify-center text-[#D7E2EA]/30 uppercase tracking-widest text-xs"
+                >
+                  Image Placeholder
+                </div>
+              ))}
+            </div>
+          )}
         </motion.div>
 
         {/* Bottom back link */}
