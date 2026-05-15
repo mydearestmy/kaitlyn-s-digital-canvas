@@ -49,9 +49,10 @@ export const projects: Project[] = [
     category: "Personal",
     name: "A Glimpse of Sydney",
     description:
-      "A visual diary of Sydney through a personal lens — its harbour light, hidden laneways, and the quiet hum of urban life. This project documents the city not as a postcard, but as a living, breathing place full of texture and feeling.",
+      "A cinematography of Sydney through a personal lens — its harbour light, hidden laneways, and the quiet hum of urban life. This project documents the city not as a postcard, but as a living, breathing place full of texture and feeling.",
     year: "2025",
-    role: "Photographer & Editor",
+    role: "Videographer & Editor",
+    videoUrl: "https://www.youtube.com/embed/ELr02mXtqs4",
     col1Image1:
       "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85",
     col1Image2:
