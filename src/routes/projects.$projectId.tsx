@@ -29,46 +29,57 @@ function ProjectDetailPage() {
   const { project } = Route.useLoaderData();
 
   return (
-    <main style={{ backgroundColor: "#0C0C0C", minHeight: "100vh" }} className="text-[#D7E2EA]">
-      <div className="max-w-6xl mx-auto px-6 md:px-10 py-10">
-        <Link
-          to="/"
-          hash="projects"
-          className="inline-flex items-center gap-2 text-[#D7E2EA]/80 hover:text-[#D7E2EA] uppercase tracking-widest text-sm transition-colors"
-        >
-          <ArrowLeft size={18} /> Back to Projects
-        </Link>
+    <main
+      style={{ backgroundColor: "#0C0C0C", minHeight: "100vh" }}
+      className="text-[#D7E2EA] w-full"
+    >
+      <div
+        className="w-full px-6 sm:px-10 md:px-16 py-10 md:py-14"
+        style={{ maxWidth: "1400px", margin: "0 auto" }}
+      >
+        {/* Back */}
+        <div className="relative z-20">
+          <Link
+            to="/"
+            hash="projects"
+            className="inline-flex items-center gap-2 text-[#D7E2EA]/50 hover:text-[#D7E2EA] uppercase tracking-widest text-sm transition-colors"
+          >
+            <ArrowLeft size={16} /> Back to Projects
+          </Link>
+        </div>
 
+        {/* Project number + title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mt-12 flex flex-col sm:flex-row sm:items-end gap-6"
+          className="mt-10 flex flex-col sm:flex-row sm:items-end gap-4 overflow-hidden"
         >
           <span
-            className="text-[#D7E2EA] font-black leading-none"
-            style={{ fontSize: "clamp(4rem, 12vw, 180px)" }}
+            className="font-black leading-none text-[#D7E2EA]/30"
+            style={{ fontSize: "clamp(4rem, 10vw, 140px)" }}
           >
             {project.number}
           </span>
-          <div>
-            <div className="uppercase tracking-widest text-sm text-[#D7E2EA]/60 mb-2">
+          <div className="pb-2">
+            <div className="uppercase tracking-widest text-sm text-[#D7E2EA]/50 mb-2">
               {project.category}
             </div>
             <h1
               className="hero-heading font-black uppercase tracking-tight leading-none"
-              style={{ fontSize: "clamp(2.5rem, 7vw, 100px)" }}
+              style={{ fontSize: "clamp(2rem, 6vw, 90px)" }}
             >
               {project.name}
             </h1>
           </div>
         </motion.div>
 
+        {/* Hero image */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-16 rounded-[40px] sm:rounded-[60px] overflow-hidden border-2 border-[#D7E2EA]/20 aspect-[16/10] bg-[#1a1a1a] flex items-center justify-center"
+          className="mt-12 rounded-[32px] sm:rounded-[48px] overflow-hidden border border-[#D7E2EA]/20 aspect-[16/9] bg-[#1a1a1a]"
         >
           <img
             src={project.col2Image}
@@ -77,22 +88,21 @@ function ProjectDetailPage() {
           />
         </motion.div>
 
-        <div className="mt-16 grid gap-12 md:grid-cols-2">
+        {/* About + Details */}
+        <div className="mt-16 grid gap-12 md:grid-cols-[2fr_1fr]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h2 className="uppercase tracking-widest text-sm text-[#D7E2EA]/60 mb-4">
+            <h2 className="uppercase tracking-widest text-xs text-[#D7E2EA]/50 mb-5">
               About the project
             </h2>
             <p
-              className="font-light leading-relaxed text-[#D7E2EA]/90"
-              style={{ fontSize: "clamp(1rem, 1.4vw, 1.25rem)" }}
+              className="font-light leading-relaxed text-[#D7E2EA]/80"
+              style={{ fontSize: "clamp(1rem, 1.4vw, 1.2rem)" }}
             >
-              [Placeholder description] This is where the story of {project.name} lives —
-              the brief, the inspiration, the process, and the outcome. Replace this
-              placeholder with the full project narrative.
+              {project.description ?? `[Placeholder description] This is where the story of ${project.name} lives — the brief, the inspiration, the process, and the outcome. Replace this placeholder with the full project narrative.`}
             </p>
           </motion.div>
 
@@ -101,38 +111,49 @@ function ProjectDetailPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h2 className="uppercase tracking-widest text-sm text-[#D7E2EA]/60 mb-4">
+            <h2 className="uppercase tracking-widest text-xs text-[#D7E2EA]/50 mb-5">
               Details
             </h2>
-            <ul className="space-y-3 text-[#D7E2EA]/90">
-              <li><span className="text-[#D7E2EA]/50 uppercase text-xs tracking-widest mr-3">Type</span>{project.category}</li>
-              <li><span className="text-[#D7E2EA]/50 uppercase text-xs tracking-widest mr-3">Year</span>2026</li>
-              <li><span className="text-[#D7E2EA]/50 uppercase text-xs tracking-widest mr-3">Role</span>Designer</li>
+            <ul className="space-y-4">
+              {[
+                { label: "Type", value: project.category },
+                { label: "Year", value: project.year ?? "2026" },
+                { label: "Role", value: project.role ?? "Designer" },
+              ].map(({ label, value }) => (
+                <li key={label} className="flex flex-col gap-1">
+                  <span className="uppercase text-[10px] tracking-widest text-[#D7E2EA]/40">{label}</span>
+                  <span className="text-[#D7E2EA]/90 font-medium">{value}</span>
+                </li>
+              ))}
             </ul>
           </motion.div>
         </div>
 
+        {/* Gallery placeholders */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-16 grid gap-6 sm:grid-cols-2"
         >
-          <div className="rounded-[30px] border-2 border-dashed border-[#D7E2EA]/20 aspect-square flex items-center justify-center text-[#D7E2EA]/40 uppercase tracking-widest text-sm">
-            Image Placeholder
-          </div>
-          <div className="rounded-[30px] border-2 border-dashed border-[#D7E2EA]/20 aspect-square flex items-center justify-center text-[#D7E2EA]/40 uppercase tracking-widest text-sm">
-            Image Placeholder
-          </div>
+          {[0, 1].map((i) => (
+            <div
+              key={i}
+              className="rounded-[24px] border border-dashed border-[#D7E2EA]/20 aspect-video flex items-center justify-center text-[#D7E2EA]/30 uppercase tracking-widest text-xs"
+            >
+              Image Placeholder
+            </div>
+          ))}
         </motion.div>
 
+        {/* Bottom back link */}
         <div className="mt-20 mb-10">
           <Link
             to="/"
             hash="projects"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-[#D7E2EA] text-[#D7E2EA] font-medium uppercase tracking-widest px-12 py-5 text-sm sm:text-base hover:bg-[#D7E2EA]/10 transition-colors"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-[#D7E2EA]/40 hover:border-[#D7E2EA] text-[#D7E2EA] font-medium uppercase tracking-widest px-10 py-4 text-sm transition-colors"
           >
-            <ArrowLeft size={18} /> Back to Projects
+            <ArrowLeft size={16} /> Back to Projects
           </Link>
         </div>
       </div>
