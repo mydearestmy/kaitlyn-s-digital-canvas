@@ -14,12 +14,24 @@ export interface Project {
 export const projects: Project[] = [
   {
     number: "01",
-    category: "University Project",
+    category: "University Project - Web Design",
     name: "Memory Box",
     description:
-      "A surreal exploration of memory and nostalgia — blending fragmented visuals and emotional storytelling to create an immersive digital experience. The project investigates how we archive personal history and the way memories distort over time.",
-    year: "2026",
-    role: "Designer & Art Director",
+      "Memory Box is an interactive art exhibition based on the 
+modern media perceptions of memories and nostalgia, with 
+concepts such as anemoia; nostalgia for a past you never 
+experienced, a term coined in 2014; and more recently the 
+re-imagnined perceptions of liminal space into something al
+most horror-centric. Furthermore, with the concept of an good 
+old time a constant throughout history, but now more prele
+vant than ever in a pessimistic modern world, it becomes an 
+interesting theme to based our project on. 
+We went in a psychological horror direction, and much like 
+many absurd, abstract contemporary exhibitions, we wanted 
+to present our concepts in a truly unexpected way.
+",
+    year: "2024",
+    role: "3D Designer",
     col1Image1:
       "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85",
     col1Image2:
