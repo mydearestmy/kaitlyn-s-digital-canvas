@@ -17,19 +17,7 @@ export const projects: Project[] = [
     category: "University Project - Web Design",
     name: "Memory Box",
     description:
-      "Memory Box is an interactive art exhibition based on the 
-modern media perceptions of memories and nostalgia, with 
-concepts such as anemoia; nostalgia for a past you never 
-experienced, a term coined in 2014; and more recently the 
-re-imagnined perceptions of liminal space into something al
-most horror-centric. Furthermore, with the concept of an good 
-old time a constant throughout history, but now more prele
-vant than ever in a pessimistic modern world, it becomes an 
-interesting theme to based our project on. 
-We went in a psychological horror direction, and much like 
-many absurd, abstract contemporary exhibitions, we wanted 
-to present our concepts in a truly unexpected way.
-",
+      "Memory Box is an interactive art exhibition based on modern media perceptions of memories and nostalgia, with concepts such as anemoia — nostalgia for a past you never experienced, a term coined in 2014 — and the re-imagined perceptions of liminal space into something almost horror-centric. With the concept of a \"good old time\" a constant throughout history, but now more prevalent than ever in a pessimistic modern world, it becomes a compelling theme to anchor a project on. We went in a psychological horror direction, and much like many absurd, abstract contemporary exhibitions, we wanted to present our concepts in a truly unexpected way.",
     year: "2024",
     role: "3D Designer",
     col1Image1:
