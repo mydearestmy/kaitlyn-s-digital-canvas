@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "A personal photography series capturing candid moments, quiet emotions, and the beauty found in everyday life. Each frame is an attempt to slow down and find meaning in the fleeting — light, shadow, and the spaces in between.",
     year: "2025",
     role: "Photographer",
-    gallery: gallery: [
+    gallery: [
       "https://raw.githubusercontent.com/mydearestmy/kaitlyn-s-digital-canvas/main/src/assets/DSC07435.JPG",
       "https://raw.githubusercontent.com/mydearestmy/kaitlyn-s-digital-canvas/main/src/assets/DSC07455.JPG",
       "https://raw.githubusercontent.com/mydearestmy/kaitlyn-s-digital-canvas/main/src/assets/DSC07564.JPG",
