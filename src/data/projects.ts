@@ -9,17 +9,19 @@ export interface Project {
   description?: string;
   year?: string;
   role?: string;
+  videoUrl?: string; // path to local video in src/assets, e.g. "/src/assets/memory-box-video.mp4"
 }
 
 export const projects: Project[] = [
   {
     number: "01",
-    category: "University Project - Web Design",
+    category: "University Project",
     name: "Memory Box",
     description:
       "Memory Box is an interactive art exhibition based on modern media perceptions of memories and nostalgia, with concepts such as anemoia — nostalgia for a past you never experienced, a term coined in 2014 — and the re-imagined perceptions of liminal space into something almost horror-centric. With the concept of a \"good old time\" a constant throughout history, but now more prevalent than ever in a pessimistic modern world, it becomes a compelling theme to anchor a project on. We went in a psychological horror direction, and much like many absurd, abstract contemporary exhibitions, we wanted to present our concepts in a truly unexpected way.",
     year: "2024",
     role: "3D Designer",
+    videoUrl: "https://www.youtube.com/embed/cNgciOb9ISM",
     col1Image1:
       "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85",
     col1Image2:
