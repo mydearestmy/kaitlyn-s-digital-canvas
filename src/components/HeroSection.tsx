@@ -3,7 +3,7 @@ import { Magnet } from "./Magnet";
 import { ContactButton } from "./ContactButton";
 import modelImg from "@/assets/model.png";
 
-const navLinks = ["About", "Price", "Projects", "Contact"];
+const navLinks = ["About", "Skills", "Projects", "Contact"];
 
 export function HeroSection() {
   return (
