@@ -11,13 +11,23 @@ export function HeroSection() {
       <FadeIn delay={0} y={-20}>
         <nav className="flex justify-between items-center px-[10%] pt-6 md:pt-8">
           {navLinks.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200"
-            >
-              {link}
-            </a>
+            link === "Contact" ? (
+              <a
+                key={link}
+                href="/contact"
+                className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200"
+              >
+                {link}
+              </a>
+            ) : (
+              <a
+                key={link}
+                href={`#${link.toLowerCase()}`}
+                className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200"
+              >
+                {link}
+              </a>
+            )
           ))}
         </nav>
       </FadeIn>
@@ -25,7 +35,7 @@ export function HeroSection() {
       <div className="flex-1 flex flex-col justify-between relative">
         <div className="overflow-hidden mt-6 sm:mt-4 md:-mt-5 px-[10%]">
           <FadeIn delay={0.15} y={40}>
-            <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[6vw] sm:text-[7vw] md:text-[8vw] lg:text-[9vw] text-center">
+            <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[7vw] sm:text-[8vw] md:text-[9vw] lg:text-[10vw] text-center">
               Hi, i&apos;m Kaitlyn
             </h1>
           </FadeIn>
@@ -46,7 +56,7 @@ export function HeroSection() {
         <div className="flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-[10%] relative z-20">
           <FadeIn delay={0.35} y={20}>
             <p
-              className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
+              className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[220px] sm:max-w-[320px] md:max-w-[400px]"
               style={{ fontSize: "clamp(0.75rem, 1.4vw, 1.5rem)" }}
             >
               a digital media creator driven to craft immersive and emotionally resonant experiences
