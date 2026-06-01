@@ -156,7 +156,7 @@ function ProjectDetailPage() {
               }}
               className="sm:columns-2 md:columns-3"
             >
-              {project.gallery.map((src, i) => (
+              {project.gallery.map((src: string, i: number) => (
                 <motion.div
                   key={src}
                   initial={{ opacity: 0, y: 20 }}
