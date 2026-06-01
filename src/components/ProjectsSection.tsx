@@ -23,7 +23,7 @@ export function ProjectsSection() {
         Project
       </h2>
 
-      <div className="w-full">
+      <div className="max-w-[80%] mx-auto">
         {projects.map((project, i) => (
           <ProjectCard
             key={project.number}
