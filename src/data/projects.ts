@@ -10,6 +10,7 @@ export interface Project {
   year?: string;
   role?: string;
   videoUrl?: string; // path to local video in src/assets, e.g. "/src/assets/memory-box-video.mp4"
+  gallery?: string[];
 }
 
 export const projects: Project[] = [
