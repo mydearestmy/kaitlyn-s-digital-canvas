@@ -14,7 +14,7 @@ export function ProjectsSection() {
     <section
       ref={ref}
       id="projects"
-      className="relative bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 px-[10%] py-20 sm:py-24 md:py-32"
+      className="relative bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 py-20 sm:py-24 md:py-32"
     >
       <h2
         className="hero-heading font-black uppercase leading-none tracking-tight text-center mb-16 sm:mb-20 md:mb-28"
