@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     number: "02",
     category: "Personal",
-    name: "photograph",
+    name: "Photography",
     description:
       "A personal photography series capturing candid moments, quiet emotions, and the beauty found in everyday life. Each frame is an attempt to slow down and find meaning in the fleeting — light, shadow, and the spaces in between.",
     year: "2025",
