@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section className="relative h-screen min-h-[700px] flex flex-col" style={{ overflowX: "clip" }}>
       <FadeIn delay={0} y={-20}>
-        <nav className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8">
+        <nav className="flex justify-between items-center px-[10%] pt-6 md:pt-8">
           {navLinks.map((link) => (
             <a
               key={link}
@@ -23,9 +23,9 @@ export function HeroSection() {
       </FadeIn>
 
       <div className="flex-1 flex flex-col justify-between relative">
-        <div className="overflow-hidden mt-6 sm:mt-4 md:-mt-5 px-6 md:px-10">
+        <div className="overflow-hidden mt-6 sm:mt-4 md:-mt-5 px-[10%]">
           <FadeIn delay={0.15} y={40}>
-            <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[8.5vw] sm:text-[9.5vw] md:text-[10.5vw] lg:text-[11.5vw]">
+            <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[6vw] sm:text-[7vw] md:text-[8vw] lg:text-[9vw]">
               Hi, i&apos;m Kaitlyn
             </h1>
           </FadeIn>
@@ -43,7 +43,7 @@ export function HeroSection() {
           </FadeIn>
         </Magnet>
 
-        <div className="flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 relative z-20">
+        <div className="flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-[10%] relative z-20">
           <FadeIn delay={0.35} y={20}>
             <p
               className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
