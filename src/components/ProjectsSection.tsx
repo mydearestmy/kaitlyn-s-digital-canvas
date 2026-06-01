@@ -23,7 +23,7 @@ export function ProjectsSection() {
         Project
       </h2>
 
-      <div className="max-w-[80%] mx-auto">
+      <div className="max-w-[65%] mx-auto">
         {projects.map((project, i) => (
           <ProjectCard
             key={project.number}
@@ -57,7 +57,7 @@ function ProjectCard({
       style={{ top: `${index * 28}px`, position: "relative" }}
     >
       <motion.div
-        className="sticky top-24 md:top-32 w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-8 sm:p-12 md:p-16 lg:p-20 flex flex-col items-center"
+        className="sticky top-24 md:top-32 w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-6 sm:p-8 md:p-10 flex flex-col items-center"
         style={{ scale, transformOrigin: "top" }}
       >
         <div className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8 md:mb-10">
@@ -88,7 +88,7 @@ function ProjectCard({
             <img
               src={project.col2Image}
               alt={project.name}
-              className="w-full max-h-[38vh] object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px] hover:opacity-90 transition-opacity cursor-pointer"
+              className="w-full max-h-[55vh] object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px] hover:opacity-90 transition-opacity cursor-pointer"
             />
           </a>
         </div>
