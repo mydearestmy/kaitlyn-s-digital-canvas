@@ -53,12 +53,12 @@ function ProjectCard({
   const scale = useTransform(progress, [index / total, 1], [1, targetScale]);
   return (
     <div
-      className="h-[85vh] flex items-start justify-center"
+      className="h-[95vh] flex items-start justify-center"
       style={{ top: `${index * 28}px`, position: "relative" }}
     >
       <motion.div
         className="sticky top-24 md:top-32 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-6 sm:p-8 md:p-10 flex flex-col items-center"
-        style={{ scale, transformOrigin: "top", width: "65%", marginLeft: "auto", marginRight: "auto" }}
+        style={{ scale, transformOrigin: "top", width: "75%", marginLeft: "auto", marginRight: "auto" }}
       >
         <div className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8 md:mb-10">
           <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
@@ -88,7 +88,7 @@ function ProjectCard({
             <img
               src={project.col2Image}
               alt={project.name}
-              className="w-full max-h-[55vh] object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px] hover:opacity-90 transition-opacity cursor-pointer"
+              className="w-full max-h-[62vh] object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px] hover:opacity-90 transition-opacity cursor-pointer"
             />
           </a>
         </div>
