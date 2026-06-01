@@ -23,7 +23,7 @@ const contactLinks = [
 function ContactPage() {
   return (
     <main style={{ backgroundColor: "#0C0C0C", minHeight: "100vh" }} className="text-[#D7E2EA]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 py-10 md:py-14">
+      <div style={{ width: "80%", marginLeft: "auto", marginRight: "auto", paddingTop: "2.5rem", paddingBottom: "2.5rem" }}>
 
         {/* Back */}
         <Link
