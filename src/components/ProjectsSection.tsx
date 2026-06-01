@@ -53,7 +53,7 @@ function ProjectCard({
   const scale = useTransform(progress, [index / total, 1], [1, targetScale]);
   return (
     <div
-      className="h-[85vh] flex items-start justify-center"
+      className="h-[85vh] flex items-start justify-center px-[17.5%]"
       style={{ top: `${index * 28}px`, position: "relative" }}
     >
       <motion.div
